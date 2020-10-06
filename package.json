@@ -1,0 +1,33 @@
+{
+  "name": "news-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.0.1",
+    "firebase": "^7.19.1",
+    "heroku": "^7.44.0",
+    "import-cwd": "^3.0.0",
+    "md5": "^2.3.0",
+    "nuxt": "^2.14.0",
+    "prettier": "^1.12.1",
+    "sass": "^1.26.10",
+    "slugify": "^1.4.5",
+    "uuid": "^8.3.0",
+    "uuid-v4": "^0.1.0",
+    "validate": "^5.1.0",
+    "vue-masonry": "^0.11.8",
+    "vue-material": "^1.0.0-beta-15",
+    "vuelidate": "^0.7.5"
+  },
+  "devDependencies": {
+    "sass-loader": "^10.0.1"
+  }
+}
