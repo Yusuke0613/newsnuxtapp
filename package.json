@@ -9,6 +9,10 @@
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/proxy": "^2.0.1",
