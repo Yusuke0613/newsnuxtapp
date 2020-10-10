@@ -201,6 +201,7 @@ const createStore = () => {
             returnSecureToken: userPayload.returnSecureToken
           });
           let user;
+
           if (userPayload.action === "register") {
             const avatar = `http://gravatar.com/avatar/${md5(
               authUserData.email
@@ -211,14 +212,19 @@ const createStore = () => {
               .doc(userPayload.email)
               .set(user);
           } else {
-            const loginRef = db.collection("users").doc(userPayload.email);
+            const loginRef = await db.collection("users").doc(userPayload.email);
+
+
             const loggedInUser = await loginRef.get();
             user = loggedInUser.data();
+            console.dir(loggedInUser.data());
           }
+
           commit("setUser", user);
           commit("setToken", authUserData.idToken);
           commit("setLoading", false);
           saveUserData(authUserData, user);
+
         } catch (err) {
           console.error(err);
           commit("setLoading", false);

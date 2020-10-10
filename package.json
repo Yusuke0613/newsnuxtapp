@@ -7,16 +7,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "dev-debug": "node --inspect-brk=9229 node_modules/nuxt/bin/nuxt"
   },
   "engines": {
-    "node": "10.13.0",
+    "node": "12.18.3",
     "npm": "6.14.6"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/proxy": "^2.0.1",
-    "firebase": "^7.19.1",
+    "firebase": "^7.23.0",
     "heroku": "^7.44.0",
     "import-cwd": "^3.0.0",
     "js-cookie": "^2.2.1",
@@ -33,6 +34,8 @@
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-loader": "^4.0.2",
     "sass-loader": "^10.0.1"
   }
 }
