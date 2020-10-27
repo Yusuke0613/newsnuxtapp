@@ -211,6 +211,9 @@ const createStore = () => {
               .collection("users")
               .doc(userPayload.email)
               .set(user);
+
+
+              
           } else {
             const loginRef = await db.collection("users").doc(userPayload.email);
 

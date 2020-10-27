@@ -156,7 +156,7 @@
         >
           <md-card style="margin-top: 1em;" md-with-hover>
             <md-ripple>
-              <md-card-media md-ratio="16:9">
+              <md-card-media md-ratio="16:9" >
                 <img :src="headline.urlToImage" :alt="headline.title">
               </md-card-media>
 
